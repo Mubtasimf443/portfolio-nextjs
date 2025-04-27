@@ -1,0 +1,29 @@
+/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ */
+/* InshaAllah, By His Mercy I Will Gain Success */
+/* about.css */
+
+#about {
+    padding: var(--spacing-xl) 0;
+    /* text-align: center; */
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--spacing-xl);
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+  }
+  
+  .about-image img {
+    min-width: 350px;
+    width: fit-content;
+    max-width: 500px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  .about-text{
+    min-width: 350px;
+  }
