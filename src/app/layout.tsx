@@ -1,25 +1,27 @@
 /*
 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ InshaAllah
 */
-
-
 import Header from "@/components/layout/Header";
 import "./globals.css";
 import "./responsive.css";
 import Footer from "@/components/layout/Footer";
-import Tags from "@/components/layout/Tags";
-
+import BodyTags from "@/components/layout/BodyTags";
+import Head from "next/head";
+import HeaderTags from "@/components/layout/HeaderTags";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body >
         <Header />
+        <Head>
+          {process.env.NODE_ENV === 'production' && <HeaderTags />}
+        </Head>
         <main className="h-dvh">
           {children}
         </main>
         <Footer />
-        {process.env.NODE_ENV === 'production' && <Tags />}
+        {process.env.NODE_ENV === 'production' && <BodyTags />}
       </body>
     </html>
   );

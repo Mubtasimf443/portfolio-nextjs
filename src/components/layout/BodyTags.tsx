@@ -6,7 +6,7 @@ interface Props {
 
 };
 
-const Tags :FC<Props> = ({}) => {
+const BodyTags :FC<Props> = ({}) => {
   return (
     <Fragment>
       <noscript>
@@ -17,4 +17,4 @@ const Tags :FC<Props> = ({}) => {
   )
 };
 
-export default Tags;
+export default BodyTags;

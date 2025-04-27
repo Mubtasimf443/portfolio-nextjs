@@ -1,5 +1,6 @@
 /* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah */
 
+"use client"
 import Link from 'next/link';
 import React, { FC, Fragment } from 'react';
 import './projects.css'

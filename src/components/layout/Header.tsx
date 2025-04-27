@@ -1,13 +1,15 @@
 /* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah */
-
+"use client"
 import Link from 'next/link';
 import React, { FC, Fragment } from 'react';
 import './Header.css'
+import { useToggle } from 'usehooks-ts'
 interface Props {
 
 };
 
 const Header: FC<Props> = ({ }) => {
+    const [showMobileNav, toggle] = useToggle();
     return (
         <Fragment>
             <header>
@@ -15,43 +17,26 @@ const Header: FC<Props> = ({ }) => {
                     <div className="container">
                         <a href="#" className="logo">M. Mubtasim</a>
 
-                        <div className="hamburger">
+                        <button className={"hamburger " + (showMobileNav ? "toggle" : "")} onClick={toggle}>
                             <span className="bar"></span>
                             <span className="bar"></span>
                             <span className="bar"></span>
-                        </div>
+                        </button>
 
-                        <ul className="nav-links">
+                        <ul className={"nav-links " + (showMobileNav ? "active" : "")}>
                             <li><a href="/#about">About</a></li>
                             <li><a href="/#skills">Skills</a></li>
                             <li><a href="/projects">Projects</a></li>
                             <li><a href="/#contact">Contact</a></li>
                         </ul>
                         <button className="contact-button" >
-                        <Link href={'/#contact'} id="header-contact-button">Contact Me</Link>
+                            <Link href={'/#contact'} id="header-contact-button">Contact Me</Link>
                         </button>
-                        
+
                     </div>
                 </nav>
-               
+
             </header>
-            <nav>
-            <div className="container">
-                <a href="#" className="logo">M. Mubtasim</a>
-                <div className="hamburger">
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
-                <ul className="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button className="contact-button">Contact Me</button>
-            </div>
-        </nav>
         </Fragment>
     )
 };

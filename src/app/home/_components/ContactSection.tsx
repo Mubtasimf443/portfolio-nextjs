@@ -1,5 +1,6 @@
 /* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah */
 
+"use client"
 import React, { FC, Fragment } from 'react';
 import './contact.css'
 interface Props {
