@@ -19,10 +19,10 @@ const Footer: FC<Props> = ({ }) => {
                         <div className="footer-links">
                             <h3>Quick Links</h3>
                             <ul>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#skills">Skills</a></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="/home#about">About</a></li>
+                                <li><a href="/home#skills">Skills</a></li>
+                                <li><a href="/home#projects">Projects</a></li>
+                                <li><a href="/home#contact">Contact</a></li>
                             </ul>
                         </div>
                         <div className="footer-social">

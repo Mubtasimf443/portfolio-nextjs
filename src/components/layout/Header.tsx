@@ -15,8 +15,7 @@ const Header: FC<Props> = ({ }) => {
             <header>
                 <nav>
                     <div className="container">
-                        <a href="#" className="logo">M. Mubtasim</a>
-
+                        <a href="/home" className="logo">M. Mubtasim</a>
                         <button className={"hamburger " + (showMobileNav ? "toggle" : "")} onClick={toggle}>
                             <span className="bar"></span>
                             <span className="bar"></span>
@@ -24,18 +23,16 @@ const Header: FC<Props> = ({ }) => {
                         </button>
 
                         <ul className={"nav-links " + (showMobileNav ? "active" : "")}>
-                            <li><a href="/#about">About</a></li>
-                            <li><a href="/#skills">Skills</a></li>
+                            <li><a href="/home#about">About</a></li>
+                            <li><a href="/home#skills">Skills</a></li>
                             <li><a href="/projects">Projects</a></li>
-                            <li><a href="/#contact">Contact</a></li>
+                            <li><a href="/home#contact">Contact</a></li>
                         </ul>
                         <button className="contact-button" >
-                            <Link href={'/#contact'} id="header-contact-button">Contact Me</Link>
+                            <Link href={'/home#contact'} id="header-contact-button">Contact Me</Link>
                         </button>
-
                     </div>
                 </nav>
-
             </header>
         </Fragment>
     )
