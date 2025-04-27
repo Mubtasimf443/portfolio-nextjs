@@ -1,0 +1,69 @@
+/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ */
+/* InshaAllah, By His Mercy I Will Gain Success */
+/* certificates.css */
+
+#certificates {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .certificate-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+  }
+  
+  .certificate-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .certificate-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--foreground);
+  }
+  
+  .cert-issuer {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .cert-year {
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+  }
+  
+  .skill-tag {
+    background-color: rgba(96, 165, 250, 0.1);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    border: 1px solid var(--primary);
+  }
+  

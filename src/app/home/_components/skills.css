@@ -1,0 +1,42 @@
+/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ */
+/* InshaAllah, By His Mercy I Will Gain Success */
+/* skills.css */
+
+.section-alt {
+    background-color: rgba(51, 65, 85, 0.1);
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .skill-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+  }
+  
+  .skill-card i {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+  }
+  
+  .skill-card-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--spacing-md);
+    object-fit: contain;
+  }
+  

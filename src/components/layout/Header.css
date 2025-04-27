@@ -1,0 +1,124 @@
+/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ */
+/* InshaAllah, By His Mercy I Will Gain Success */
+
+/* header.css */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+  }
+  
+  nav {
+    height: 4rem;
+  }
+  
+  nav .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: var(--spacing-md);
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: var(--foreground);
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Hamburger Toggle Animation */
+  .hamburger.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Contact Button */
+  .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5da0f3;
+    border: 2px solid #5da0f3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: inherit;
+  }
+  
+  .contact-button:hover {
+    color: #3178cf;
+  }
+  
+  /* Mobile Header Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      background-color: var(--background);
+      padding: var(--spacing-md) 0;
+      z-index: 999;
+    }
+    
+    .nav-links.active {
+      display: flex;
+    }
+    
+    .nav-links li {
+      text-align: center;
+      padding: var(--spacing-sm) 0;
+    }
+  }
+  
