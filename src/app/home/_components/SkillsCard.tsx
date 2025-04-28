@@ -1,44 +1,38 @@
-/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah */
 "use client"
 import { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 
 interface Props {
     src?: string;
     alt?: string;
     name: string;
     className?: string;
-    Icon ?:LucideIcon
-};
+    Icon?: LucideIcon;
+}
 
-const SkillsCard: FC<Props> = (props) => {
+const SkillsCard: FC<Props> = ({ src, alt, name, className, Icon }) => {
     return (
-        <Fragment>
-            <div style={{
-                backgroundColor: " rgba(255, 255, 255, 0.05)",
-                border: " 1px solid var(--border)",
-                borderRadius: '0.5rem',
-                padding: 'var(--spacing-lg)',
-                textAlign: 'center',
-                transition: 'transform 0.3s, border-color 0.3s'
-            }}>
-                {(props.src && props.alt) && (
+        <div className="group p-6 bg-white/5 border border-gray-800 rounded-lg text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary-500">
+            {(src && alt) && (
+                <div className="flex justify-center items-center mb-4">
                     <Image
-                        src={props.src}
-                        alt={props.alt}
-                        width={64}
-                        height={64}
-                        className={`skill-card-icon ${props.className ?? ""}`}
+                        src={src}
+                        alt={alt}
+                        width={48}
+                        height={48}
+                        className={`w-12 h-12 object-contain ${className ?? ""}`}
                     />
-                )}
-                {
-                    props.Icon && (  <props.Icon />  )
-                }
-                <h4>{props.name}</h4>
-            </div>
-        </Fragment>
-    )
+                </div>
+            )}
+            {Icon && (
+                <div className="flex justify-center items-center mb-4">
+                    <Icon className="w-12 h-12 text-primary-500" />
+                </div>
+            )}
+            <h4 className="text-lg font-medium text-gray-200">{name}</h4>
+        </div>
+    );
 };
 
 export default SkillsCard;
