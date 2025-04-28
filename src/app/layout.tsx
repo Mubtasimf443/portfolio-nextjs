@@ -8,7 +8,7 @@ import BodyTags from "@/components/layout/BodyTags";
 import HeaderTags from "@/components/layout/HeaderTags";
 import { Metadata } from 'next';
 
-const baseUrl = 'https://muhammadmubtasimfuad.onrender.com/';
+const baseUrl = 'https://muhammadmubtasimfuad.onrender.com';
 
 export const metadata: Metadata = {
   keywords: [
