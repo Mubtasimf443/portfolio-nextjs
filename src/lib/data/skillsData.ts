@@ -6,6 +6,7 @@ import {
   Server, 
   Cpu, 
   Globe, 
+  
 } from 'lucide-react';
 
 // Define the skills data structure
@@ -43,7 +44,7 @@ export const skillsData: SkillCategory[] = [
             },
             {
                 name: "Golang",
-                icon: "/static/icon/golang.svg",
+                icon: "https://img.icons8.com/?size=48&id=44442&format=png&color=000000",
                 alt: "Golang"
             },
             {
@@ -96,7 +97,7 @@ export const skillsData: SkillCategory[] = [
             },
             {
                 name: "Gin Gonic",
-                icon: "/static/icon/gin.svg",
+                icon: "/static/icon/gin-gonic.svg",
                 alt: "Gin Gonic"
             }
         ]
@@ -146,7 +147,7 @@ export const skillsData: SkillCategory[] = [
             },
             {
                 name: "Git",
-                icon: "/static/icon/git.svg",
+                icon: "https://img.icons8.com/?size=48&id=20906&format=png&color=000000",
                 alt: "Git"
             }
         ]
