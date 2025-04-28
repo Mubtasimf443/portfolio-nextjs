@@ -34,10 +34,10 @@ const Header = () => {
                         absolute top-16 left-0 w-full bg-gray-900 p-4 flex-col
                         md:flex-row items-center z-40`}
                     >
-                        <li><a href="/home#about" className="text-white hover:text-primary-500 transition-colors duration-300">About</a></li>
-                        <li><a href="/home#skills" className="text-white hover:text-primary-500 transition-colors duration-300">Skills</a></li>
-                        <li><a href="/projects" className="text-white hover:text-primary-500 transition-colors duration-300">Projects</a></li>
-                        <li><a href="/home#contact" className="text-white hover:text-primary-500 transition-colors duration-300">Contact</a></li>
+                        <li><Link href="/home#about" className="text-white hover:text-primary-500 transition-colors duration-300">About</Link></li>
+                        <li><Link href="/home#skills" className="text-white hover:text-primary-500 transition-colors duration-300">Skills</Link></li>
+                        <li><Link href="/projects" className="text-white hover:text-primary-500 transition-colors duration-300">Projects</Link></li>
+                        <li><Link href="/home#contact" className="text-white hover:text-primary-500 transition-colors duration-300">Contact</Link></li>
                     </ul>
 
                     {/* Contact Button */}
