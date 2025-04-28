@@ -1,3 +1,7 @@
+/*
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah
+*/
+
 "use client"
 import { LucideIcon } from 'lucide-react';
 import Image from 'next/image';

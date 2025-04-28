@@ -14,6 +14,13 @@ const config: Config = {
         primary: {
           DEFAULT: '#60a5fa',
           dark: '#3b82f6',
+          400: '#7ab6ff',
+          500: '#5da0f3',
+          600: '#3178cf',
+        },
+        gray: {
+          900: '#0f172a',
+          800: '#1f2937',
         },
         muted: {
           DEFAULT: '#334155',

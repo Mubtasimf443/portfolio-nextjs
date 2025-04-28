@@ -3,7 +3,7 @@
 */
 import Header from "@/components/layout/Header";
 import "./globals.css";
-import "./responsive.css";
+// import "./responsive.css";
 import Footer from "@/components/layout/Footer";
 import BodyTags from "@/components/layout/BodyTags";
 // import Head from "next/head";
@@ -19,8 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </head>
       <body >
         <Header />
-        
-        <main className="h-dvh">
+        <main className="min-h-dvh">
           {children}
         </main>
         <Footer />

@@ -1,70 +1,134 @@
-/* بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ﷺ InshaAllah */
-
 "use client"
-import React, { FC, Fragment } from 'react';
-import './contact.css'
-interface Props {
+import { Mail, Github, Twitter, Briefcase } from 'lucide-react';
 
-};
+const ContactSection = () => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        // Add your form submission logic here
+    };
 
-const ContactSection: FC<Props> = ({ }) => {
+    const contactInfo = [
+        {
+            icon: Mail,
+            title: "Email",
+            link: "mailto:mubtasimf443@gmail.com",
+            text: "mubtasimf443@gmail.com"
+        },
+        {
+            icon: Github,
+            title: "GitHub",
+            link: "https://github.com/Mubtasimf443",
+            text: "Mubtasimf443"
+        },
+        {
+            icon: Twitter,
+            title: "X Twitter",
+            link: "https://x.com/MubtasimFu11492",
+            text: "@mubtasim"
+        },
+        {
+            icon: Briefcase,
+            title: "Upwork",
+            link: "https://www.upwork.com/freelancers/~01d88c06387ca7603a?mp_source=share",
+            text: "View Upwork Profile"
+        }
+    ];
+
     return (
-        <Fragment>
-            <section id="contact" className="section-alt">
-                <div className="container">
-                    <h2>Get In Touch</h2>
-                    <div className="contact-grid">
-                        <div className="contact-form">
-                            <form id="contactForm">
-                                <div className="form-group">
-                                    <label htmlFor="name">Name</label>
-                                    <input type="text" id="name" name="name" required placeholder="Your Name" minLength={6}
-                                        maxLength={35} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
-                                    <input type="email" id="email" name="email" required placeholder="your@email.com"
-                                        minLength={7} maxLength={50} />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="message">Message</label>
-                                    <textarea id="message" name="message" required placeholder="Your message here..."
-                                        maxLength={2500} minLength={25}></textarea>
-                                </div>
-                                <button type="submit" className="btn primary">Send Message</button>
-                            </form>
-                        </div>
+        <section id="contact" className="py-20 bg-gray-900/50">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                    <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+                </div>
 
-                        <div className="contact-info">
-                            <div className="contact-item">
-                                <i className="fas fa-envelope"></i>
-                                <h4>Email</h4>
-                                <a href="mailto:mubtasimf443@gmail.com">mubtasimf443@gmail.com</a>
+                <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    {/* Contact Form */}
+                    <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div>
+                                <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
+                                    Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    minLength={6}
+                                    maxLength={35}
+                                    placeholder="Your Name"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white 
+                                        placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
+                                />
                             </div>
+                            <div>
+                                <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    minLength={7}
+                                    maxLength={50}
+                                    placeholder="your@email.com"
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white 
+                                        placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium">
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    minLength={25}
+                                    maxLength={2500}
+                                    rows={6}
+                                    placeholder="Your message here..."
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white 
+                                        placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold 
+                                    hover:bg-primary-600 transition-colors duration-300"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
-                            <div className="contact-item">
-                                <i className="fab fa-github"></i>
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/Mubtasimf443" target="_blank">Mubtasimf443</a>
+                    {/* Contact Info */}
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        {contactInfo.map((item, index) => (
+                            <div 
+                                key={index}
+                                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 flex flex-col items-center 
+                                    text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary-500"
+                            >
+                                <item.icon className="w-8 h-8 text-primary-500 mb-4" />
+                                <h4 className="text-lg font-semibold text-white mb-2">{item.title}</h4>
+                                <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-primary-500 transition-colors"
+                                >
+                                    {item.text}
+                                </a>
                             </div>
-                            <div className="contact-item">
-                                <i className="fab fa-twitter"></i>
-                                <h4>X Twitter</h4>
-                                <a href="https://x.com/MubtasimFu11492" target="_blank">@mubtasim</a>
-                            </div>
-                            <div className="contact-item">
-                                <i className="fab fa-upwork"></i>
-                                <h4>Upwork</h4>
-                                <a href="https://www.upwork.com/freelancers/~01d88c06387ca7603a?mp_source=share"
-                                    target="_blank">View Upwork
-                                    Profile</a>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-            </section>
-        </Fragment>
-    )
+            </div>
+        </section>
+    );
 };
 
 export default ContactSection;
