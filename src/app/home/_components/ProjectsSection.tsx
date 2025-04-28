@@ -1,57 +1,9 @@
 "use client"
-import Image from 'next/image';
+import ProjectCard from '@/components/card/ProjectCard';
+import Heading2 from '@/components/element/Heading2';
 import Link from 'next/link';
-import { Github, ExternalLink } from 'lucide-react';
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  imagePath: string;
-  githubUrl?: string;
-  liveUrl?: string;
-}
 
-const ProjectCard = ({ title, description, imagePath, githubUrl, liveUrl }: ProjectCardProps) => (
-  <div className="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-    <div className="relative h-48 w-full">
-      <Image
-        src={imagePath}
-        alt={title}
-        fill
-        className="object-cover object-top"
-        loading="lazy"
-      />
-    </div>
-    <div className="p-6 flex flex-col flex-1">
-      <h3 className="text-xl font-bold text-primary-500 mb-2">{title}</h3>
-      <p className="text-gray-400 mb-4 flex-1">{description}</p>
-      <div className="flex gap-4">
-        {githubUrl && (
-          <a 
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-primary-500 hover:text-primary-400 transition-colors"
-          >
-            <Github className="w-5 h-5 mr-2" />
-            GitHub
-          </a>
-        )}
-        {liveUrl && (
-          <a 
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-primary-500 hover:text-primary-400 transition-colors"
-          >
-            <ExternalLink className="w-5 h-5 mr-2" />
-            Live Demo
-          </a>
-        )}
-      </div>
-    </div>
-  </div>
-);
 
 const ProjectsSection = () => {
   const projects = [
@@ -79,8 +31,8 @@ const ProjectsSection = () => {
     <section className="py-20 bg-gray-900" id="projects">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Projects</h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+          <Heading2>Projects</Heading2>
+         
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

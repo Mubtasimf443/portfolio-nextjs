@@ -5,7 +5,7 @@ import { Github, Twitter } from 'lucide-react';
 
 const HeroSection = () => {
     return (
-        <section id="hero" className="min-h-[90vh] flex items-center py-16 lg:py-24 bg-gray-900">
+        <section id="hero" className="min-h-[90vh] flex items-center pb-16 bg-gray-900">
             <div className="container mx-auto px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-center gap-x-12 gap-y-10">
                 {/* Content */}
                 <div className="max-w-3xl">

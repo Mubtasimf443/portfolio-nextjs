@@ -1,14 +1,14 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import Heading2 from '@/components/element/Heading2';
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-100 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+          <Heading2>About Me</Heading2>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-12 min-h-[500px]">

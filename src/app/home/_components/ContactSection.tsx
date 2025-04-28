@@ -1,4 +1,5 @@
 "use client"
+import Heading2 from '@/components/element/Heading2';
 import { Mail, Github, Twitter, Briefcase } from 'lucide-react';
 
 const ContactSection = () => {
@@ -38,8 +39,8 @@ const ContactSection = () => {
         <section id="contact" className="py-20 bg-gray-900/50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-                    <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+                    <Heading2>Get In Touch</Heading2>
+                   
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">

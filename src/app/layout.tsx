@@ -82,7 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body >
         <Header />
-        <main className="min-h-dvh">
+        <main className="min-h-dvh pt-24">
           {children}
         </main>
         <Footer />

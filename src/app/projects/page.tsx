@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Github, ExternalLink } from 'lucide-react';
+import Heading2 from '@/components/element/Heading2';
+import SubHeading from '@/components/element/SubHeading';
 
 export const metadata: Metadata = {
   title: 'Projects of Muhammad Mubtasim',
@@ -98,15 +100,16 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="pb-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          {/* <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
+          <div className="w-20 h-1 bg-primary-500 mx-auto"></div> */}
+          <Heading2 >My Projects</Heading2>
+          <SubHeading>
             A collection of my work showcasing my skills in full-stack development, 
             from web applications to APIs and tools.
-          </p>
+          </SubHeading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
