@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import SkillsCard from '../../../components/card/SkillsCard';
+import SkillsCard from '@/components/card/SkillsCard';
 import { skillsData } from '@/lib/data/skillsData';
 import Heading2 from '@/components/element/Heading2';
 import SubHeading from '@/components/element/SubHeading';

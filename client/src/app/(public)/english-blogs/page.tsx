@@ -6,6 +6,8 @@ import SubHeading from '@/components/element/SubHeading';
 import BlogCard, { IBlog } from '@/components/card/BlogCard';
 import Container from '@/components/element/Container';
 import Pagination from '@/components/ui/Pagination';
+import Button from '@/components/element/Button';
+import Link from 'next/link';
 
 
 // Example blog data - Replace this with your actual data from API/Database
@@ -26,13 +28,13 @@ const blogs: IBlog[] = [
         publishedAt: '2025-04-28',
         slug: 'building-modern-web-application-nextjs-typescript'
     },
-   
-   
+
+
 ];
 
 const BlogsPage = () => {
     return (
-        <main className="min-h-screen bg-gray-900 py-20">
+        <main className="min-h-screen bg-gray-900 pb-20">
             {/* Header Section */}
             <section className="text-center container mx-auto px-4 mb-16">
                 <Heading2>My Blog</Heading2>
@@ -61,6 +63,30 @@ const BlogsPage = () => {
                     {blogs.map((blog) => (
                         <BlogCard key={blog.id} blog={blog} />
                     ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <Button variant={'primary'} >
+                        <Link
+                            href="/bangali-blogs"
+                            className='flex flex-row justify-center items-center w-full'
+                        >
+                            বাংলায় পড়ুন
+                            <svg
+                                className="w-5 h-5 ml-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
+                            </svg>
+                        </Link>
+                    </Button>
                 </div>
 
                 
