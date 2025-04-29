@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useToggle } from 'usehooks-ts';
+import Button from '../element/Button';
 
 const Header = () => {
     const [showMobileNav, toggle] = useToggle();
@@ -11,15 +12,15 @@ const Header = () => {
             <nav className="h-16">
                 <div className="container mx-auto px-4 h-full flex items-center justify-between">
                     {/* Logo */}
-                    <Link 
-                        href="/home" 
+                    <Link
+                        href="/home"
                         className="text-primary-500 text-xl font-bold no-underline"
                     >
                         M. Mubtasim
                     </Link>
 
                     {/* Hamburger Menu */}
-                    <button 
+                    <button
                         className="md:hidden flex flex-col cursor-pointer ml-4"
                         onClick={toggle}
                     >
@@ -37,19 +38,19 @@ const Header = () => {
                         <li><Link href="/home#about" className="text-white hover:text-primary-500 transition-colors duration-300">About</Link></li>
                         <li><Link href="/home#skills" className="text-white hover:text-primary-500 transition-colors duration-300">Skills</Link></li>
                         <li><Link href="/projects" className="text-white hover:text-primary-500 transition-colors duration-300">Projects</Link></li>
-                        <li><Link href="/blogs" className="text-white hover:text-primary-500 transition-colors duration-300">Blogs</Link></li>
+                        <li><Link href="/english-blogs" className="text-white hover:text-primary-500 transition-colors duration-300">Blogs</Link></li>
                         <li><Link href="/home#contact" className="text-white hover:text-primary-500 transition-colors duration-300">Contact</Link></li>
                     </ul>
 
                     {/* Contact Button */}
-                    <Link 
-                        href="/home#contact"
-                        className="hidden md:inline-block px-5 py-2.5 text-base font-bold text-primary-500 
-                            border-2 border-primary-500 rounded-md hover:text-primary-600 hover:border-primary-600
-                            transition-colors duration-300 bg-transparent"
-                    >
-                        Contact Me
-                    </Link>
+                    <Button variant={'outline'}>
+                        <Link
+                            href="/home#contact"
+                             >
+                            Contact Me
+                        </Link>
+                    </Button>
+
                 </div>
             </nav>
         </header>

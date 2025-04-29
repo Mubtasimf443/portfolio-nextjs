@@ -1,5 +1,6 @@
 "use client"
 import ProjectCard from '@/components/card/ProjectCard';
+import Button from '@/components/element/Button';
 import Heading2 from '@/components/element/Heading2';
 import Link from 'next/link';
 
@@ -42,10 +43,10 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
+          <Button variant={'primary'} >
           <Link
             href="/projects"
-            className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-500 text-white font-semibold 
-              hover:bg-primary-600 transition-colors duration-300"
+           className='flex flex-row justify-center items-center w-full'
           >
             View More Projects
             <svg 
@@ -62,6 +63,8 @@ const ProjectsSection = () => {
               />
             </svg>
           </Link>
+          </Button>
+       
         </div>
       </div>
     </section>
