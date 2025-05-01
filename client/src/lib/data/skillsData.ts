@@ -83,7 +83,7 @@ export const skillsData: SkillCategory[] = [
         skills: [
             {
                 name: "Node.js",
-                icon: "/static/icon/nodejs.svg",
+                icon: "/static/icon/nodejs.png",
                 alt: "Node.js"
             },
             {
@@ -132,7 +132,7 @@ export const skillsData: SkillCategory[] = [
         skills: [
             {
                 name: "AWS EC2",
-                icon: "/static/icon/aws-ec2.svg",
+                icon: "/static/icon/ec2.png",
                 alt: "AWS EC2"
             },
             {
@@ -162,7 +162,8 @@ export const skillsData: SkillCategory[] = [
             },
             {
                 name: "GEMINI",
-                LucideIcon: Cpu
+                icon :'/static/icon/gemini.png',
+                alt :"Gemini Ai"
             },
             {
                 name: "DEEPSEEK",

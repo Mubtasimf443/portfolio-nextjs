@@ -2,7 +2,6 @@
 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ InshaAllah
 */
 import Header from "@/components/layout/Header";
-import "../globals.css";
 import Footer from "@/components/layout/Footer";
 import BodyTags from "@/components/layout/BodyTags";
 import HeaderTags from "@/components/layout/HeaderTags";
