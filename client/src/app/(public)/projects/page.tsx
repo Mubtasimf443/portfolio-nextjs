@@ -60,10 +60,26 @@ const ProjectCard = ({ title, description, imagePath, githubUrl, liveUrl }: Proj
 );
 
 const projects = [
+   {
+    title: "FriendsBook App Backend",
+    description: "I have done the Backend Developement of FriendsBook App Video Calling, Matrimony , Chat System and Feature",
+    imagePath: "/static/img/express_typescript_mongodb.png",
+  },
+  {
+    title: "Admin Panal - FriendsBook App",
+    description: "I have built backend Admin Panel of a FriendsBook App to Manage Users, Gift , Membership Management and etc",
+    imagePath: "/static/img/react_shadcn.png",
+  },
+    {
+    title: "Ecommerce Feature",
+    description: "For Gojushinryu International Martial Arts, I have build a Ecommerce Fuctionality",
+    imagePath: "/static/img/nodejs_ecommerce.png",
+    liveUrl: "https://gojushinryu.com/shop",
+  },
   {
     title: "Backend Admin Panel",
     description: "I have built backend Admin Panel of a Gojushinryu International Martial Arts Website",
-    imagePath: "/static/img/gojushinryu.com_control-panal.png",
+    imagePath: "/static/img/ejs.png",
     githubUrl: "https://github.com/Mubtasimf443/Gojushinryu-website",
   },
   {
@@ -87,13 +103,13 @@ const projects = [
   {
     title: "PDF Processing Backend API",
     description: "I have built PDF Processing Backend API's with Python FastAPI",
-    imagePath: "/static/img/github.com_Mubtasimf443_fastapi-pdf-Processing-Backend.png",
+    imagePath: "/static/img/fastApi.png",
     githubUrl: "https://github.com/Mubtasimf443/fastapi-pdf-Processing-Backend",
   },
   {
     title: "Photo Editing Tool",
     description: "I have built Photo Editing Tool using Reactjs and Jim.js",
-    imagePath: "/static/img/photo-editing-website-by-mern.onrender.com_.png",
+    imagePath: "/static/img/react_redux.png",
     githubUrl: "https://github.com/Mubtasimf443/Photo-Editor-React.js",
   },
 ];
