@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Twitter } from 'lucide-react';
+import { Download, File, FileDown, Github, Twitter } from 'lucide-react';
 
 const HeroSection = () => {
     return (
@@ -24,24 +24,12 @@ const HeroSection = () => {
                     </p>
                     <div className="flex flex-wrap gap-5">
                         <Link 
-                            href="/projects"
+                            href="/static/doc/mubtasim_resume.pdf"
                             className="px-8 py-3 bg-primary-500 text-white rounded-md font-medium 
                                 hover:bg-primary-600 transition-colors duration-300 flex items-center"
                         >
-                            View Projects
-                            <svg 
-                                className="w-4 h-4 ml-3" 
-                                fill="none" 
-                                stroke="currentColor" 
-                                viewBox="0 0 24 24"
-                            >
-                                <path 
-                                    strokeLinecap="round" 
-                                    strokeLinejoin="round" 
-                                    strokeWidth="2" 
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                                />
-                            </svg>
+                            <FileDown  className="w-4 h-4 mr-2"/>
+                            Resume
                         </Link>
                         <a 
                             href="https://github.com/Mubtasimf443" 
